@@ -82,7 +82,7 @@ export default function LoginForm() {
           <div className="message">{successMessage}</div>
           <div className="message">{loginError}</div>
           <div className="register_link-container">
-            <p>If you don't have a user. You can register <a href="/register">Her!</a></p>
+            <p>If you don't have a user. You can register <a href="/register">Here!</a></p>
           </div>
         </>
       );
