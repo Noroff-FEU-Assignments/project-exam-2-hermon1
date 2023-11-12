@@ -1,0 +1,29 @@
+
+.comments{
+    border-top: $primary_dark solid 2px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 3rem;
+    .comment_container{
+      padding-top: 20px;
+      display: flex;
+      .comment_body{
+        padding-left: 20px;
+        width: 100%;
+        text-align: start;
+      }
+      .comment_owner{
+        padding: 0 20px;
+        width: 40%;
+        text-align: start;
+        font-weight: bold;
+        a{
+          color: $turquoise;
+          text-transform: capitalize;
+        }
+      }
+      border-bottom: 1px solid #ddd;
+      &:nth-child(even) {background-color: #f2f2f2;}
+    }
+      
+  }

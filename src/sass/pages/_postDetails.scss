@@ -1,0 +1,40 @@
+.info_container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      padding: 0 20px;
+      p {
+        display: inline;
+        font-weight: 400;
+      }
+      span {
+        text-transform: capitalize;
+        font-weight: 400;
+  
+        a {
+          color: $turquoise;
+        }
+      }
+    }
+  }
+  .page_body-container {
+    margin: 2rem auto;
+    max-width: 600px;
+  
+    p {
+      font-weight: 400;
+    }
+  }
+  .image_container {
+    max-width: 500px;
+  
+    margin: auto;
+    img {
+      object-fit: cover;
+      max-height: 900px;
+      width: 100%;
+    }
+  }
+  

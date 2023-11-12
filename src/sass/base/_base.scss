@@ -1,0 +1,39 @@
+.success {
+    border: solid 1px $success;
+    background-color: $success_light;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    p {
+      margin: 0;
+      color: $success;
+      font-weight: bolder;
+    }
+  }
+  
+  .error {
+    border: solid 1px $success;
+    background-color: $success_light;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    p {
+      margin: 0;
+      color: $success;
+      font-weight: bolder;
+    }
+  }
+  
+  a{
+    color: black;
+    border-bottom: 2px solid white;
+    &:hover{
+      color: black;
+      text-decoration: none;
+      border-bottom: 2px solid $turquoise;
+    }
+  }
+  
+  .tag{
+    font-weight: bold;
+  }

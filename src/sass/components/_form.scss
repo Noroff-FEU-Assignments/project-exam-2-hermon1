@@ -1,0 +1,74 @@
+.form_container{
+    margin-top: 40px;
+   
+    .form-label{
+     display: block;
+     margin: 0;
+     font-family: $font;
+     font-size: 18px;
+     font-weight: 400;
+     margin: 10px;
+    }
+    .input-group{
+     flex-direction: column;
+      .input_group-container{
+       display: flex;
+       border: solid black 2px;
+       width: 60%;
+       margin: auto;
+       input[type="url"]{
+         width: 100%;
+         border: none;
+         line-height: 1.5;
+         height: calc(1.5em + .75rem + 2px);
+         &:focus-visible{
+           outline: none;
+         }
+       }
+     }
+    }
+    .input-group-text{
+     background-color: $white;
+     border:none;
+    }
+    .form-control{
+     border:none;
+   
+    }
+     .btn{
+       margin: 20px 0;
+     }
+   }
+   
+   .dashboard_layout{
+   .sidebar_container{
+     .input_group-container{
+       border: unset;
+       @media(min-width: 574px){
+         margin: 0;      
+       }
+     }
+   }
+   }
+   
+   .edit_form, .create_post{
+     margin: 10px 20px;
+     .input-group{
+       justify-content: center;
+       align-items: center;
+       input, textArea{
+         width: 400px;
+         @media(max-width: 425px){
+           width: 280px;
+   
+         }
+       }
+     }
+     label{
+       font-weight: 400;
+       text-transform: capitalize;
+     }
+     .btn-primary{
+       margin-top: 30px;
+     }
+   }

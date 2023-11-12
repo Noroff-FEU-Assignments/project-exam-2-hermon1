@@ -1,0 +1,66 @@
+.card {
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0px 3px 6px #00000029;
+    &:hover{
+      box-shadow: 0px 3px 6px $white;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px 20px;
+    }
+  }
+  a.author_name {
+    text-transform: capitalize;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: $light_green;
+    padding: 10px 20px;
+    color: $white;
+    font-weight: bold;
+    &:hover {
+      background-color: $primary_dark;
+      cursor: pointer;
+    }
+  }
+  .card-title {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+  }
+  
+  .profile_card {
+    width: 250px;
+    margin: 10px;
+    border: 2px solid white;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .followers_container{
+      display: flex;
+      justify-content: center;
+      p{
+        padding: 0 10px;
+      }
+    }
+    a{
+      color: black;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &:hover{
+      box-shadow: 2px 8px 15px 0px #888888;
+      border: 2px solid $turquoise;
+      // box-shadow: none;
+      text-decoration: none;
+      
+    }
+  }
+  

@@ -1,0 +1,24 @@
+.follow_button, .button {
+    border: 2px solid $primary_dark;
+    background-color: $primary_dark;
+    color: $white;
+    border-radius: 50px;
+    opacity: 1;
+    width: 140px;
+    height: 50px;
+    font-size: 20px;
+    &:hover{
+      border: 2px solid $primary_dark;
+      background-color: $success_light;
+      color: $primary_dark;
+      text-decoration: none;
+  
+    }
+  }
+  .button{
+    padding: 10px 20px;
+    font-size: unset;
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }

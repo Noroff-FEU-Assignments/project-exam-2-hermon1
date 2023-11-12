@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+$heading : 'DM Serif Display', serif;
+$font:  'Source Sans Pro', sans-serif;
+body{
+  font-family: $font;
+  font-weight: 300;
+
+  h1{
+    font-family: $heading;
+  }
+  span, p, a{
+    font-family: $font;
+    font-size: 18px;
+  }
+}
+.navbar-brand{
+  font-family: $heading;
+  font-size: 30px;
+
+}
+.nav-link{
+  font-family: $font;
+  font-weight: 400;
+  color: $primary_dark !important;
+  border-bottom: solid 2px white;
+  &:hover{
+    border-color: $turquoise;
+  }
+}
+.dropdown-item:hover{
+  background-color: #00c9a77e;
+}
+.register_link-container{
+  a{
+    color: $rust;
+    border-bottom: solid $rust 2px;
+    text-decoration: none;
+    font-weight: bold;
+  
+    &:hover{
+      text-decoration: none;
+      font-weight: bold;
+      color: $rust;
+      border-color: $white;
+    }
+  }
+  p{
+    margin: 20px 0;
+  }
+}

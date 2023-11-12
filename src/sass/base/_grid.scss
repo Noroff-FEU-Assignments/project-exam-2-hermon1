@@ -1,0 +1,22 @@
+.container-fluid{
+    margin-top: 0 !important;
+    max-width: 1200px;
+    margin: auto;
+    .header_image{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 200px;
+      h1{
+        line-height: 150px;
+      }
+    }
+  }
+  
+  .post_list_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 700px;
+    
+  }

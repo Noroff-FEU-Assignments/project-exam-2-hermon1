@@ -1,0 +1,23 @@
+@import "./base/color";
+@import "./base/base";
+@import "./base/variabels";
+@import "./base/typography";
+@import "./base/layout";
+@import "./base/buttons";
+@import "./base/grid";
+
+// Pages
+@import "./pages/postDetails";
+@import "./pages/posts";
+@import "./pages/profile";
+
+// Components
+@import "./components/forms";
+@import "./components/card";
+@import "./components/sideBar";
+@import "./components/followingContainer";
+@import "./components/comments";
+@import "./components/checkbox";
+@import "./components/buttons";
+@import "./components/container";
+@import "./components/footer";

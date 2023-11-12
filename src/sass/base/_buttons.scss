@@ -1,0 +1,59 @@
+.btn-primary {
+    background-color: $primary_dark;
+    border-color: $primary_dark;
+    border-width: 2px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    &:hover {
+      background-color: #F2EFE9;
+      color: $primary_dark;
+      border-color: $orange;
+    }
+  }
+  
+  .load_button{
+    margin: auto;
+    background-color: $primary_dark;
+    border-color: $primary_dark;
+    color: $white;
+    border-width: 2px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    &:hover {
+      background-color: transparent;
+      color: $primary_dark;
+      border-color: $orange;
+    }
+  }
+  
+  button.delete{
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin: 20px 10px;
+    border: 2px solid $error;
+    background-color: $error;
+    color: white;
+    &:hover{
+      font-weight: bolder;
+      background-color: $error_light;
+      color: $error;
+    }
+  }
+  a.edit{
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin: 20px 10px;
+    border: 2px solid $success;
+    background-color: $success;
+    color: white;
+    &:hover{
+      font-weight: bolder;
+      background-color: $success_light;
+      text-decoration: none;
+      color: $success;
+    }
+  }

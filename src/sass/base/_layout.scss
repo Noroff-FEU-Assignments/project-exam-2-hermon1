@@ -1,0 +1,85 @@
+.container-fluid{
+    margin-top: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  .list_post-grid{
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+    .error, .form-error{
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #FFF6F6;
+      border: solid 1px $error;
+      border-radius: 5px;
+      color: $error;
+      font-weight: 500;
+    }
+    .message{
+      .success{
+        margin-top: 10px;
+        padding: 10px;
+        background-color: $success_light;
+        border: solid 1px $success;
+        border-radius: 5px;
+        color: $success;
+        font-weight: 500;
+      }
+    }
+    .message_container{
+      p{
+        padding: 5px;
+        margin: 0;
+      }
+    }
+  
+  
+    //profile page
+    .banner_container{
+      max-width: 100%;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .profile_container{
+      display: grid;
+      @media(min-width: 574px){
+        grid-template-columns: 200px  1fr;
+        column-gap: 10px;
+      }
+      .sidebar_container{
+        order: 2;
+        border-top: 2px solid $primary_dark;
+        border-bottom: 2px solid $primary_dark;
+        padding-top: 20px;
+        height: fit-content;
+        @media(min-width: 574px){
+          order: unset;
+          margin-top: 4rem;
+        }
+        .input_group-container{
+          max-width: unset !important;
+          // border: unset !important;
+  
+        }      
+      }
+    }
+    .content_container{
+      margin-top: 40px;
+    }
+  
+    .profile_card-list{
+      justify-content: center;
+    }
+    .reaction_container{
+      display: flex;
+      justify-content: center;
+      div{
+        margin: 10px 20px;
+      }
+    }
