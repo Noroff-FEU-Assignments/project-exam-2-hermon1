@@ -70,7 +70,7 @@ export default function GetProfileDetails(props) {
       }
   
       let following = false;
-      followers.map((followers) => {
+      followers.forEach((followers) => {
         if (followers.name === auth.name) {
           following = true;
         }

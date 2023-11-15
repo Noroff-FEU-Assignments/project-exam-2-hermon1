@@ -85,7 +85,7 @@ export default function GetPostReaction(props) {
             {reactSymbol.map((react) => {
                 let icons = react;
                 let count
-                reactions.map((symbol) => {
+                reactions.forEach((symbol) => {
                     let symbols = symbol.symbol
                     if (symbols === react) {
                         icons = symbols;
