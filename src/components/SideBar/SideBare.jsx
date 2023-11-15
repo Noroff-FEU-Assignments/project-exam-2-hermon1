@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useContext,  useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ import missingAvatar from "../../assets/missing_profile_image.png";
 
 export default function EditUser() {
     let navigate = useNavigate();
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
     const url = BASE_URL + `/profiles/${auth.name}`
@@ -18,7 +18,7 @@ export default function EditUser() {
     const {
       register,
       handleSubmit,
-      formState: { errors },
+      
     } = useForm();
   
     async function updateUser(data) {
@@ -67,7 +67,7 @@ export default function EditUser() {
     return (
       <div className="edit_user">
         <p>Edit your profile {auth.name}</p>
-        <img className="profile_image" src={avatar} />
+        <img className="profile_image" alt="profileimage" src={avatar} />
         <Form className="form_container" onSubmit={handleSubmit(updateUser)}>
   
           <InputGroup className="mb-3">

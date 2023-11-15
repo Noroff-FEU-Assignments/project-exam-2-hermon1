@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 export default function UserList() {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [users, setUsers] = useState([]);
-    const [isCompleted, setIsCompleted] = useState(false);
+    const [isCompleted] = useState(false);
     const [offset, setoffset] = useState(20);
     const url = BASE_URL + `/profiles?sort=name&sortOrder=asc&_followers=true&_following=true&limit=20`;
     const token = auth.accessToken;
@@ -35,7 +35,7 @@ export default function UserList() {
       }
   
       getUserList();
-    }, []);
+    }, );
     
     const loadMore = () => {
       setoffset(count => count + 10);
@@ -77,7 +77,7 @@ export default function UserList() {
                 return (
                   <div className="profile_card">
                     <Link to={`/profile/${user.name}`} name={user.name}>
-                    <img src={image} />
+                    <img src={image} alt="imagesource"/>
                     <h2>{user.name}</h2>
                     <div className="followers_container">
                       <p>Following: <span>{user.following.length}</span></p> |

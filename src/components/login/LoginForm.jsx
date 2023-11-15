@@ -13,7 +13,7 @@ export default function LoginForm() {
     const [loginError, setLoginError] = useState(null);
     const [successMessage, setSuccessMessage] = useState(null)
     const navigate = useNavigate();
-    const [auth, setAuth] = useContext(AuthContext);
+    const [ setAuth] = useContext(AuthContext);
 
     const {
         register,

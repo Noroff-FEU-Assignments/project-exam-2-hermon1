@@ -12,7 +12,7 @@ import { useEffect } from "react";
 export default function Comments(props) {
     const { id } = useParams();
     const url = BASE_URL + `/posts/${id}/comment`
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [successMessage, setSuccessMessage] = useState(null);
     const [comments, setComments] = useState([])
     const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +42,7 @@ export default function Comments(props) {
         }
       }
       GetComments();
-    }, [])
+    }, )
   
 
   async function PostNewComment(data) {

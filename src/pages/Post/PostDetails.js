@@ -10,7 +10,7 @@ import Moment from "moment";
 import AuthContext from "../../context/AuthContext";
 
 export default function PostDetails() {
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
   
     const [page, setPage] = useState([]);
     const [loader, setLoader] = useState(true);
@@ -45,7 +45,7 @@ export default function PostDetails() {
 
 
     getPost();
-}, []);
+}, );
 
 if (loader) {
   return (

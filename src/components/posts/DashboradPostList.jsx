@@ -11,7 +11,7 @@ import Moment from "moment";
 
 
 export default function GetPosts() {
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [posts, setPosts] = useState([]);
     const [index, setIndex] = useState(9);
     const [isCompleted, setIsCompleted] = useState(false);
@@ -45,7 +45,7 @@ export default function GetPosts() {
 
 
     getPosts();
-  }, []);
+  }, );
   const loadMore = () => {
     setIndex(index + 9)
     if (index >= posts.length) {

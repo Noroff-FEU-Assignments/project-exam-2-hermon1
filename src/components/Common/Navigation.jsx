@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import Login from "../../pages/Login/Login"
-import AuthContext, { AuthProvider } from "../../context/AuthContext";
+import AuthContext, {  } from "../../context/AuthContext";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import RegisterUser from "../../pages/Register/RegisterUser";
 import PostDetails from "../../pages/Post/PostDetails";
@@ -21,7 +21,7 @@ import Followers from "../../pages/Profile/FollowerList";
 import FollowingList from "../../pages/Profile/FollowingList";
 
 export default function NavigationLayout() {
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth] = useContext(AuthContext);
 
   return (
     <>

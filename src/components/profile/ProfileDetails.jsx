@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
 import missingImage from "../../assets/missing_profile_image.png";
 import missingAvatar from "../../assets/missing_profile_image.png";
@@ -14,7 +14,7 @@ import UnFollowUser from "./UnfollowUser";
 
 export default function GetProfileDetails(props) {
     let navigate = useNavigate();
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [userData, setUserData] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
@@ -46,7 +46,7 @@ export default function GetProfileDetails(props) {
         }
       }
       getUserDetails();
-    }, [])
+    }, )
   
     if (isLoading) {
       return <div>Loading</div>;
@@ -76,7 +76,7 @@ export default function GetProfileDetails(props) {
         }
       })
       let followButton
-      let isOpen = false
+    
   
       if (following === true) {
         followButton = <UnFollowUser name={props.name} />
@@ -90,7 +90,7 @@ export default function GetProfileDetails(props) {
           </div>
           <div className="user_info-container">
             <div className="avatar_container">
-              <img src={avatar} />
+              <img src={avatar} alt="avatar" />
             </div>
             <div className="username_container">
               <h1>{props.name}</h1>
@@ -116,7 +116,7 @@ export default function GetProfileDetails(props) {
                 <>
                   <div className="post_details">
                     <div>
-                      <img src={image} />
+                      <img src={image} alt="imagesource" />
                     </div>
                     <div className="text_container">
                       <h2>{post.title}</h2>
@@ -153,7 +153,7 @@ export default function GetProfileDetails(props) {
                 <>
                   <div className="post_details">
                     <div>
-                      <img src={image} />
+                      <img src={image} alt="imagesource" />
                     </div>
                     <div className="text_container">
                       <h2>{post.title}</h2>

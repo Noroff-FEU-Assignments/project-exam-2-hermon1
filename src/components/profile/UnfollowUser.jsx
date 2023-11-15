@@ -1,24 +1,17 @@
-import axios from "axios";
-import { useContext } from "react";
 import { useState } from "react";
-import { BASE_URL } from "../../constants/api";
-import AuthContext from "../../context/AuthContext";
 
 
 export default function UnfollowUser(props){
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(null);
-    const [auth] = useContext(AuthContext);
+    const [ setIsLoading] = useState(true);
+    const [isError] = useState(null);
+
   
-    const updateUrl = BASE_URL + `/profiles/${props.name}/unfollow`;
   
     async function removeFollow(){ 
-      const options = {
-        headers: { Authorization: `Bearer ${auth.accessToken}` },
-      };
+      
   
       try {
-        const response = await axios.put(updateUrl, {}, options);
+       
         window.location.reload(false);
       } catch (error) {
         console.log(error)

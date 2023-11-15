@@ -4,7 +4,7 @@ import AuthContext from "../../context/AuthContext";
 
 
 export default function Footer() {
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
 
 
   return (

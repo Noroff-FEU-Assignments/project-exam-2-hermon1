@@ -1,15 +1,14 @@
-import { render } from "@testing-library/react";
+
 import axios from "axios";
 import { useContext, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
 export default function DeletePost({ id }) {
-    const navigate = useNavigate();
-    const [error, setError] = useState(null);
-    const [auth, setAuth] = useContext(AuthContext);
+   
+  
+    const [auth] = useContext(AuthContext);
     const [show, setShow] = useState(false);
   
 
@@ -37,7 +36,7 @@ export default function DeletePost({ id }) {
       return (
         <>
           <button type="button" className="delete" onClick={handleShow}>
-            {error ? "Error" : "Delete"}
+            { "Delete"}
           </button>
 
 

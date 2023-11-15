@@ -11,7 +11,7 @@ export default function CreatePostForm() {
   const url = BASE_URL + "/posts"
   const navigate = useNavigate();
   const [successMessage, setSuccessMessage] = useState(null)
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth] = useContext(AuthContext);
 
 
   const {

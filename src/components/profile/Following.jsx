@@ -2,8 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Card, CardGroup } from "react-bootstrap";
-import { useNavigate } from "react-router";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
@@ -11,11 +10,9 @@ import AuthContext from "../../context/AuthContext";
 
 export default function Following(props) {
 
-    const [auth, setAuth] = useContext(AuthContext);
-    const [userData, setUserData] = useState();
+    const [auth] = useContext(AuthContext);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
-    const [posts, setPosts] = useState([])
     const [following, setFollowing] = useState([])
   
     const url = BASE_URL + `/profiles/${props.name}?_following=true`;
@@ -37,7 +34,7 @@ export default function Following(props) {
         }
       }
       getFollowingDetails();
-    }, [])
+    }, )
   
     if (isLoading) {
       return <div>Loading</div>;

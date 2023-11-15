@@ -7,14 +7,13 @@ import AuthContext from "../../../context/AuthContext";
 
 export default function GetPostReaction(props) {
     const [reactions, setReactions] = useState([]);
-    const [loader, setLoader] = useState(true);
-    const [isError, setIsError] = useState(null);
-    const [auth, setAuth] = useContext(AuthContext)
-    const [count, setCount] = useState(null)
+    const [ setLoader] = useState(true);
+    const [ setIsError] = useState(null);
+    const [auth] = useContext(AuthContext)
     const [submitting, setSubmitting] = useState(false);
 
     const id = props.id;
-    let countView;
+   
     const options = {
         headers: {
             Authorization: `Bearer ${auth.accessToken}`
@@ -36,7 +35,7 @@ export default function GetPostReaction(props) {
             }
         }
         getReaction()
-    }, [])
+    }, )
 
 
 
@@ -48,7 +47,7 @@ export default function GetPostReaction(props) {
 
         if (checked === true) {
             checkedValue++
-            countView = checkedValue
+         
         }
         const data = {
             symbol: checkedName,
@@ -85,15 +84,13 @@ export default function GetPostReaction(props) {
         <>
             {reactSymbol.map((react) => {
                 let icons = react;
-                let postId;
                 let count
                 reactions.map((symbol) => {
                     let symbols = symbol.symbol
                     if (symbols === react) {
                         icons = symbols;
-                        postId = symbol.postId
                         count = symbol.count
-                        countView = count
+                     
                     }
                 })
                 return (

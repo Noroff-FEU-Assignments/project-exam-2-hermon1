@@ -9,8 +9,8 @@ import AuthContext from "../../context/AuthContext";
 
 export default function FormEditPost(title) {
     const [post, setPost] = useState(null);
-    const [convertedText, setConvertedText] = useState();
-    const [auth, setAuth] = useContext(AuthContext);
+  
+    const [auth] = useContext(AuthContext);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
     // const url = BASE_URL + "/posts"
@@ -47,7 +47,7 @@ export default function FormEditPost(title) {
 
           getPost();
         },
-        []
+      
       );
 
 

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router";
 import { BASE_URL } from "../../constants/api";
 import { Link } from "react-router-dom";
 import DeletePost from "../posts/DeletePost";
@@ -10,14 +9,13 @@ import DeletePost from "../posts/DeletePost";
 
 export default function GetPostsList() {
     // const navigate = useNavigate();
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const userName = auth.name
     const url = BASE_URL + `/profiles/${userName}/posts?ortOrder=desc`;
   
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
-    const [message, setMessage] = useState(null)
   
     useEffect(function () {
       async function getPosts() {
@@ -38,7 +36,7 @@ export default function GetPostsList() {
       }
   
       getPosts();
-    }, []);
+    },);
   
     if (isLoading) {
       return <div>Loading</div>;

@@ -7,7 +7,7 @@ import HeaderImage from "../../assets/Header_Image.png";
 
 
 export default function CreatePost() {
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
 
     if (auth === null) {
         return <Navigate replace to="/" />;

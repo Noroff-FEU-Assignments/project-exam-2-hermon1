@@ -2,8 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Card, CardGroup } from "react-bootstrap";
-import { useNavigate } from "react-router";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
@@ -12,11 +11,9 @@ import AuthContext from "../../context/AuthContext";
 export default function FollowerList(props) {
     // let navigate = useNavigate();
   
-    const [auth, setAuth] = useContext(AuthContext);
-    const [userData, setUserData] = useState();
+    const [auth] = useContext(AuthContext);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
-    const [posts, setPosts] = useState([])
     const [followers, setFollowers] = useState([])
   
     const url = BASE_URL + `/profiles/${props.name}?_followers=true`;
@@ -37,7 +34,7 @@ export default function FollowerList(props) {
         }
       }
       getFollowersDetails();
-    }, [])
+    }, )
   
     if (isLoading) {
       return <div>Loading</div>;

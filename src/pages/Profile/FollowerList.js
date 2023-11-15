@@ -5,7 +5,7 @@ import AuthContext from "../../context/AuthContext";
 
 
 export default function Followers(){
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const { name } = useParams();
   
     if (auth === null) {

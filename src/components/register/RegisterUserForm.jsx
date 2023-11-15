@@ -6,14 +6,13 @@ import { BASE_URL, REGISTER_PATH } from "../../constants/api";
 import { MdOutlineAlternateEmail } from "react-icons/md"
 import { FaUserAlt } from 'react-icons/fa';
 import { BiLockAlt } from 'react-icons/bi'
-import FormError from "../Common/FormError";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
 
 export default function RegisterUserForm() {
     const [loginError, setLoginError] = useState(null);
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth] = useContext(AuthContext);
     const [successMessage, setSuccessMessage] = useState(null)
     const navigate = useNavigate();
     if (auth) {

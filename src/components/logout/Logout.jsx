@@ -6,7 +6,7 @@ import AuthContext from "../../context/AuthContext";
 
 
 export default function Logout(){
-    const [auth, setAuth] = useContext(AuthContext);
+    const [ setAuth] = useContext(AuthContext);
     function logoutUser(){
       setAuth(null);
       return <Navigate replace to="/" />;

@@ -1,5 +1,4 @@
-import Heading from "../../components/Common/Heading";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import GetProfileDetails from "../../components/profile/ProfileDetails";
 
 
