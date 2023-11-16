@@ -58,3 +58,5 @@ This is something that can always be improved but i did my best to make this hap
 I have aimed to have all the required functionality ontop of adding as much extra functionality that was capable of providing considering the time constraints. 
 
 I had some difficulties with responsiveness but bootstrap made it a little easier to create a well responsive and accesible solution. 
+
+Bugs was a big problem. the site was working great before i had to deploy to netlify. After i thought i fixed all the issues the site was not working the same.
