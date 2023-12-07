@@ -1,9 +1,66 @@
 # Project Exam 2
+
 ## Goal
 To take the skills learned over the last two years and take on an extensive project where the finished product should reflect the candidate's general development capabilities, in addition to visual and technical skills.
 
-## Brief
+## Description
 An existing Social Media company has approached you to create a brand new front end for their application. While they have a list of required features, the design and user experience has not been specified. Working with the official API documentation, plan, design and build a modern front end social media application.
+
+## Description(Purpose)
+
+Anti social is a social media app where registered useres u can create posts containing photos, gain followers and comment. The user can also edit or delete the posts. As most social media apps it is a place where users can interact with each other by commenting and reacting with emojis. It is also possible to visit other profiles and follow/unfollow. On the profile page the user edit their avatar and banner for a more personlizes feel.
+
+
+
+### Frameworks and Libraries
+
+- React
+- React Bootstrap 
+- Yup and react-hook-form 
+- Axios 
+- Font Awesome 
+- Google Fonts 
+
+
+## Hosting Services
+
+-  Netlify
+
+
+
+## Installation and Setup
+
+First clone down the project from github.  
+
+Then open the project and run `npm install` in the terminal.  
+
+Next you can run: 
+
+`npm start` 
+
+This will open a webbrowser and run the application in developer mode locally on your computer. Normally the application starts on `port 3000` if it is not already in use - press `Y` to open on another port. This page will reload when you save any changes. You can also see any errors in the terminal and console. 
+
+
+# How to registar new user on the app  
+
+To registar a new user you to have a `@stud.noroff.no` or `@noroff.no` email. 
+
+## Contact
+
+www.linkedin.com/in/hermon-tesfay-92620771
+
+hermon.tesfay@gmail.com
+
+
+
+
+
+
+
+
+
+
+
 
 ## Requirements
 
